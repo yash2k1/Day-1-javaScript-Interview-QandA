@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- question 1 -->
+    <div class="container">
+        <div class="question">
+            Que.1 Differentce between "==", and "===" operator
+        </div>
+ 
+        <div class="ans">
+            <div class="explaination">
+                === is called strick equal and == this is equal <br>
+                For 2 == "2", the abstract equality operator returns true because the "2" is converted to the number 2
+                before the comparison is made. <br>
+                For 2 === "2", the strict equality operator returns false because it sees that the data types are different.
+            </div>
+        </div>
+    </div>
+    <!-- question 2 -->
+    <div class="container">
+        <div class="question">
+            Que.2 Difference between Var,Let, Const in JS?
+        </div>
+        <div class="ans">
+            <div class="explaination">
+                <h3>var</h3>
+                1. var can be redeclared and reinitailize as many times you want.<br>
+                2. variable can be hoist which meaning the declearation move at the top of the scope<br>
+                3. var has a function scope<br>
+                4. var is before the ES6<br>
+                <h3>let</h3>
+                1. let can't be redeclared but can be reinitailize as many times you want.<br>
+                2. let variable cannot be hoisted variable goes into temporal dead zone if we try to access the variable
+                before decration.<br>
+                3. let has a block scope<br>
+                4. let is introdunce in ES6<br>
+                <h3>const</h3>
+                1. const can't be redeclared or reinitailiz.<br>
+                2. const variable cannot be hoisted variable goes into temporal dead zone if we try to access the
+                variable before decration.<br>
+                3. const has a block scope<br>
+                4. const is introdunce in ES6<br>
+
+            </div>
+            <pre>
+ <b>var,let and const on redeclared and reinitailize</b>
+ console.log(x)//value of x is undefined (hoisting)
+var x=4;
+console.log(x);//value of x is 4
+var x=5; //redeclared
+console.log(x);//value of x is 5
+x=8;//reassign
+console.log(x); //value of x is 8
+
+console.log(y)//Cannot access 'y' before initialization
+let y=2;
+console.log(y)// value of y is 2
+y=3;// value of y is 3
+let y=5; //cannot redeclared
+
+console.log(z)// Cannot access 'z' before initialization
+ const z=7;
+console.log(z)//value of z is 7 
+const z=6;//cannot redeclared
+z=44;////cannot reassign
+
+
+<b>var are function scope and let , const are block scope</b>
+if(true){
+    var x=34;
+    let y=3;
+    const z=43;
+    console.log(x); //value of x =34
+    console.log(y); //value of y =3
+    console.log(z);//value of z =43
+}
+ console.log(x); //value of x =34
+ console.log(y); //y is not defined
+ console.log(z);//z is not defined
+
+        </pre>
+        </div>
+
+    </div>
+    <!-- question 3 -->
+    <div class="container">
+        <div class="question">
+            Ques.3 What is hoisting?
+        </div>
+
+        <div class="ans">
+            <div class="explaination">
+                hoisting is a phenomina in which interpretator moves the declearation at the top
+                scope before code is being execute. Hoisting use to avoid geting the errors <br>
+                hosing happen in variable made by var keyword and simple funtions.
+            </div>
+            <pre>
+  console.log(x) //value of x is undefined 
+  console.log(func)//function func(){...}
+  var x=3;
+  function    
+ </pre>
+        </div>
+    </div>
+    <!-- question 3 -->
+    <div class="container">
+        <div class="question">
+            Ques.4 What is a Temporal Dead Zone?
+        </div>
+
+        <div class="ans">
+            <div class="explaination">
+                A temporal dead zone (TDZ) is the area of a block where a variable is inaccessible until the moment the
+                computer completely initializes it with a value.
+            </div>
+            <pre>
+    console.log(y);//here y is in Temporal Dead Zone
+    let y=23;
+ </pre>
+        </div>
+    </div>
+    <!-- question 4 -->
+    <div class="container">
+        <div class="question">
+            Ques.5 What is meant by first class functions
+        </div>
+
+        <div class="ans">
+            <div class="explaination">
+                A function is said to have First-class functions if functions in that language are treated
+                like other variables. So the functions can be assigned to any other variable or passed as an argument or
+                can be returned by another function.
+            </div>
+            <pre>
+        var firstClass=function(){
+         console.log('this is first class funtion');
+        }
+    </pre>
+        </div>
+    </div>
+    <!-- question 5 -->
+    <div class="container">
+        <div class="question">
+            Ques.5 What are pure functions?
+        </div>
+
+        <div class="ans">
+ <div class="explaination">
+A Pure Function is a function that always returns the same result if the same
+arguments are passed
+</div>
+<pre>
+function(3,6){
+ console.log(3+6);
+}
+</pre>
+</div>
+</div>
+
+</body>
+
+</html>
